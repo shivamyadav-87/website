@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MDPH Clone Navbar</title>
+ <link href="bootstrap.min.css">
+
+<style>
+
+.shop {
+  position: relative;
+}
+
+/* Button */
+.shop-btn {
+  background: #2d5c4d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 🔥 FULL WIDTH MEGA MENU */
+.shop-mega {
+  position: absolute;
+  top: 120%;
+  right: 0;
+
+  width: 600px; /* tu 100vw bhi kar sakta hai */
+  background: white;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s;
+}
+
+/* Items */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.item img {
+  width: 40px;
+}
+
+/* Hover */
+.item:hover {
+  background: #f5f5f5;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* 🔥 SHOW ON HOVER */
+.shop:hover .shop-mega {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+/* Basic styling */
+.menu {
+  list-style: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Hidden by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 250px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 🔥 Hover pe show hoga */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.dock{
+  display:flex;
+  gap:15px;
+  padding:7px;
+  justify-content:center;
+}
+
+.icon{
+  width:40px;
+  transition:0.3s;
+}
+
+.icon img{
+  width:100%;
+  border-radius:15px;
+}
+
+.icon:hover{
+  transform:scale(1.6);
+}
+
+.dock:hover .icon:not(:hover){
+  transform:scale(0.9);
+}
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, sans-serif;
+}
+
+body{
+background:#ffffff;
+}
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+height:80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 60px;
+border-bottom:1px solid #eee;
+}
+
+/* LOGO */
+
+.logo{
+font-size:32px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+/* MENU */
+
+.menu{
+display:flex;
+gap:35px;
+font-size:16px;
+}
+
+.menu a{
+text-decoration:none;
+color:#333;
+position:relative;
+}
+
+.menu a::after{
+content:"▼";
+font-size:10px;
+margin-left:6px;
+color:#999;
+}
+
+
+.shop-btn{
+background:#3c3c3c;
+color:white;
+border:none;
+padding:10px 22px;
+font-size:15px;
+cursor:pointer;
+border-radius:2px;
+}
+
+.shop-btn:hover{
+background:black;
+}
+
+.social-icons{
+display:flex;
+gap:12px;
+}
+
+.social-icons div{
+width:28px;
+height:28px;
+border:1px solid #ccc;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+cursor:pointer;
+}
+
+/* HERO SPACE LIKE SCREENSHOT */
+
+.hero{
+height:500px;
+background:white;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+}
+
+</style>
+
+</head>
+
+<body>
+
+    
+
+<header class="navbar">
+  
+  
+
+
+<div class="logo"><img src="image.png" alt="" width="100px" height="30px"></div>
+
+
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+      Who We Are
+      <ul class="dropdown-menu">
+        <li>About Us</li>
+        <li>Purpose, Ambition & Values</li>
+        <li>A Better World</li>
+        <li>Manufacturing Facilities</li>
+        <li>India Sales</li>
+        <li>International Sales</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Our Brand
+      <ul class="dropdown-menu">
+        <li>About Us</li>
+        <li>Purpose, Ambition & Values</li>
+        <li>A Better World</li>
+        <li>Manufacturing Facilities</li>
+        <li>India Sales</li>
+        <li>International Sales</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Exports
+      <ul class="dropdown-menu">
+        <li>Exports Overview</li>
+        <li>Global Events</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Careers
+      <ul class="dropdown-menu">
+        <li>Current Openings</li>
+        <li>Apply For Job</li>
+        <li>Intern with us</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<a href="#">Updates</a>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+Contect Us
+      <ul class="dropdown-menu">
+        <li>General Enquiry</li>
+        <li>Our Offices</li>
+        <li>Become a Dwaler</li>
+        <li>Become a Vendor</li>
+        <li>Product Feedback</li>
+        <li>Distributor Feedback</li>
+         <li>Ethics Helpline</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+   
+
+  <div class="shop">
+    <button class="shop-btn">🛒 Shop</button>
+
+    <!-- 🔥 Mega Menu -->
+    <div class="shop-mega">
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Flipkart_logo_%282026%29.svg">
+        <span>Flipkart</span>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Pinterest_Logo.svg">
+        <span>Pinterest</span>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg">
+        <span>Twitter</span>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
+        <span>Amazon India</span>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
+        <span>Amazon International</span>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Snapdeal_branding_logo.svg">
+        <span>Snapdeal</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="dock div1">
+ 
+
+<div class="dock">
+    <a href="https://instagram.com" target="_blank" class="icon">
+<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
+</a>
+
+<div class="icon">
+<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+</div>
+
+<div class="icon">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+</div>
+
+<div class="icon">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733553.png">
+</div>
+
+<div class="icon">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</div>
+
+</div>
+
+
+
+</header>
+
+<section class="hero"></section>
+
+
+</body>
+</html>

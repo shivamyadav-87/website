@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+
+
+/* about image */
+    body {
+      height: 100vh; /* full screen height */
+     
+      justify-content: center; /* horizontal center */
+      align-items: center; /* vertical center */
+      background-color: #f9f9f9;
+    }
+    .imgs {
+        margin-top: 240px;
+     width: 1250px;
+     height: 600px;
+    
+    
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+/* about image end */
+
+
+.change {
+      font-family: Arial, sans-serif;
+    
+      background: #f9f9f9;
+    }
+
+    .brands-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* text vertically center */
+      padding: 40px;
+      background: #fff;
+    }
+
+    .brands-text {
+      flex: 1 1 40%;
+      padding-right: 30px;
+    }
+
+    .brands-text h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .brands-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .gallery {
+      flex: 1 1 55%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 per row */
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .img-border {
+      height: 150px;
+      width: 150px;
+      border: 5px solid #fff;
+      transition: 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fafafa;
+    }
+
+    .img-border:hover {
+      border: none;
+      transform: scale(1.05);
+    }
+
+    .img-border img {
+      max-width: 100px;
+      max-height: 80px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .brands-section {
+        flex-direction: column;
+      }
+      .brands-text {
+        
+        text-align: center;
+      }
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+        
+      }
+    }
+    .sti{
+      width: 85%;
+      height: 700px;
+     margin-top: 180px;
+    
+    
+    }
+
+
+     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+   
+    }
+
+    .success-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      
+    }
+
+    .success-text {
+      flex: 1 1 45%;
+      padding-right: 30px;
+    }
+
+    .success-text h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .success-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .success-logos {
+      flex: 1 1 50%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 per row */
+      gap: 25px;
+      justify-items: center;
+    }
+
+    .logo-box {
+      width: 140px;
+      height: 100px;
+      border: 1px;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-box:hover {
+      transform: scale(1.05);
+    
+    }
+
+    .logo-box img {
+      max-width: 100%;
+      max-height: 80px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .success-section {
+        flex-direction: column;
+      }
+      .success-text {
+        
+        text-align: center;
+      }
+      .success-logos {
+        grid-template-columns: repeat(2, 1fr);
+      
+      }
+    }
+
+    @media (max-width: 480px) {
+      .success-logos {
+        grid-template-columns: 1fr;
+      }
+    }
+    *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,sans-serif;
+}
+
+.section{
+  min-height:80vh;
+  padding:30px 2%;
+  width:100% ;
+  color:white;
+  background:
+    /* linear-gradient(#0008,#000c), */
+    
+    url("about.jpg") center/cover;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px 25px;
+}
+
+.card{
+  background:#fff;
+  color:#222;
+  padding:15px;
+  min-height:80px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.card .icon{
+  font-size:25px;
+  color:#f5b400;
+}
+
+.card h3{
+  font-size:13px;
+}
+
+.card p{
+  font-size:12px;
+  margin-top:4px;
+}
+
+.content{
+  text-align:center;
+  max-width:750px;
+  margin:55px auto 25px;
+}
+
+.content h1{
+  font-size:34px;
+}
+
+
+
+.content p{
+  margin-top:15px;
+  line-height:1.5;
+  font-size:14px;
+}
+
+.video{
+  max-width:650px;
+  height:320px;
+  margin:auto;
+  position:relative;
+}
+
+.video img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.play{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:red;
+  color:white;
+  border:0;
+  border-radius:8px;
+  padding:15px 22px;
+  font-size:22px;
+}
+
+.btn{
+  display:block;
+  margin:20px auto;
+  padding:12px 25px;
+  color: white;
+  background:black;
+  border:0;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+@media(max-width:700px){
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .content h1{
+    font-size:25px;
+  }
+
+  .video iframe{
+    height:220px;
+  }
+}
+
+/* About page: mobile and tablet layout */
+@media (max-width: 1024px) {
+  .imgs {
+    width: min(92%, 900px);
+    height: auto;
+    margin-top: 120px;
+  }
+
+  .sti {
+    width: min(92%, 900px);
+    height: auto;
+    min-height: 420px;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imgs {
+    width: calc(100% - 32px);
+    margin-top: 32px;
+  }
+
+  .sti {
+    width: calc(100% - 32px);
+    min-height: 300px;
+    margin-top: 40px;
+  }
+
+  .brands-section,
+  .success-section {
+    padding: 32px 20px;
+  }
+
+  .gallery,
+  .success-logos {
+    gap: 16px;
+  }
+
+  .img-border,
+  .logo-box {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .video {
+    width: calc(100% - 32px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .video img,
+  .video iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-section,
+  .success-section {
+    padding: 24px 16px;
+  }
+
+  .gallery,
+  .success-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .content {
+    padding: 0 16px;
+  }
+}
+    
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- header start -->
+
+
+<header class="navbar">
+  
+  
+<a href="mainpage.html">
+<div class="logo"><img src="image.png" alt="" width="100px" height="30px"></div>
+</a>
+
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+      Who We Are
+      <ul class="dropdown-menu">
+        <li ><a href="about.html">About Us</a></li>
+        <li>Purpose, Ambition & Values</li>
+        <li>A Better World</li>
+        <li>Manufacturing Facilities</li>
+        <li>India Sales</li>
+        <li>International Sales</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Our Brand
+      <ul class="dropdown-menu">
+        <a href="about.html"><li>About Us</li></a>
+        <li>Purpose, Ambition & Values</li>
+        <li>A Better World</li>
+        <li>Manufacturing Facilities</li>
+        <li>India Sales</li>
+        <li>International Sales</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Exports
+      <ul class="dropdown-menu">
+        <li>Exports Overview</li>
+        <li>Global Events</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Careers
+      <ul class="dropdown-menu">
+        <li>Current Openings</li>
+        <li>Apply For Job</li>
+       <a href="Intern with us.html"> <li>Intern with us</li></a>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<a href="#">Updates</a>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+Contect Us
+      <ul class="dropdown-menu">
+        <li>General Enquiry</li>
+        <li>Our Offices</li>
+        <li>Become a Dwaler</li>
+        <li>Become a Vendor</li>
+        <li>Product Feedback</li>
+        <li>Distributor Feedback</li>
+         <li>Ethics Helpline</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+   
+
+  <div class="shop">
+    <button class="shop-btn">🛒 Shop</button>
+
+    <!-- 🔥 Mega Menu -->
+    <div class="shop-mega">
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Flipkart_logo_%282026%29.svg">
+        <span>Flipkart</span>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Pinterest_Logo.svg">
+        <span>Pinterest</span>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg">
+        <span>Twitter</span>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
+        <span>Amazon India</span>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
+        <span>Amazon International</span>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Snapdeal_branding_logo.svg">
+        <span>Snapdeal</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+</header>
+<!-- header end -->
+
+<!-- img -->
+ <center>
+   <img src="aboutimage.png" alt="" class="sti">
+   </center>
+   <br><br>
+   <br>
+   <br>
+<!-- img end -->
+<div class="change">
+  <section class="brands-section">
+    <div class="brands-text">
+      <h2>Meet our brands</h2>
+      <p>
+        Our brand is founded on the principles of honesty,<br>integrity, and a relentless commitment to customer <br>satisfaction. 
+        We take pride in the quality of our <br>products and services, and we're constantly looking <br>for ways to improve and innovate.
+      </p>
+    </div>
+
+    <div class="gallery">
+     <a href="https://mdph.com/zed-black-15/"> <div class="img-border"><img src="Logo-1.png" alt="Logo 1"></div></a>
+      <a href="https://mdph.com/kangana/"><div class="img-border"><img src="Logo-2.png" alt="Logo 2"></div></a>
+     <a href="https://mdph.com/manthan/"> <div class="img-border"><img src="Logo-3.png" alt="Logo 3"></div></a>
+      <a href="https://mdph.com/dindin/"><div class="img-border"><img src="Logo-4.png" alt="Logo 4"></div></a>
+     <a href="https://mdph.com/bronut/"> <div class="img-border"><img src="Logo-5.png" alt="Logo 5"></div></a>
+      <a href="https://mdph.com/orva/"><div class="img-border"><img src="Logo-7.png" alt="Logo 7"></div></a>
+     <a href="https://mdph.com/coach/"> <div class="img-border"><img src="Logo-9.png" alt="Logo 9"></div></a>
+     <a href="https://mdph.com/neer/"> <div class="img-border"><img src="Logo-11.png" alt="Logo 11"></div></a>
+     <a href="https://mdph.com/ampliscent/"> <div class="img-border"><img src="Logo-12.png" alt="Logo 12"></div></a>
+     <a href="https://mdph.com/samarpan/"> <div class="img-border"><img src="Logo-13.png" alt="Logo 13"></div></a>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- detail -->
+  <br>
+
+ 
+
+  <section class="success-section">
+    <div class="success-text">
+      <h2>MDPH Success Story</h2>
+      <p>
+        MDPH has a wide range of quality products in its own brands in categories of Agarbatti, Dhoopbatti, Hand Sanitisers, Hand Wash, Edible Oils, Essential Oils, Packaged Tea, Mosquito Coils, Natural Hair Colour, Heena, Soya Chunks & Confectionary. 
+        Company’s flagship brand, <strong>Zed Black Agarbatti</strong>, is amongst the top 3 brands in its category in India.
+      </p>
+    </div>
+
+    <div class="success-logos">
+      
+      <div class="logo-box"><img src="aajtak-copy.webp" alt="Aaj Tak"></div>
+      <div class="logo-box"><img src="globallinker-copy.webp" alt="GlobalLinker"></div>
+      <div class="logo-box"><img src="yourstory-copy.webp" alt="YourStory"></div>
+      <div class="logo-box"><img src="kenfolios-copy.webp" alt="Kenfolios"></div>
+      <div class="logo-box"><img src="India-today-logo-1.png" alt="India Today"></div>
+    </div>
+  </section>
+
+
+  <section class="section">
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🏢</div>
+      <div>
+        <h3>Headquartered in Indore</h3>
+        <p>in 39 company owned depots across India</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏆</div>
+      <div>
+        <h3>"Zed Black" brand endorsed by</h3>
+        <p>Ace Cricketer M S Dhoni</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">⭐</div>
+      <div>
+        <h3>"Manthan" brand endorsed</h3>
+        <p>by Bollywood Superstar Hrithik Roshan</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌐</div>
+      <div>
+        <h3>"Din Din Brand"</h3>
+        <p>endorsed by Doraemon</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏭</div>
+      <div>
+        <h3>World's largest Raw Agarbatti Factory</h3>
+        <p>in 15 acres</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">✈️</div>
+      <div>
+        <h3>Exports to more than 43 countries</h3>
+        <p>with own office in USA</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">👥</div>
+      <div>
+        <h3>Wide network of more than 3,500</h3>
+        <p>authorised distributors across India</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">📦</div>
+      <div>
+        <h3>Products available at over</h3>
+        <p>7,50,000 retail outlets in India</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏭</div>
+      <div>
+        <h3>Over 9,50,000 sq. ft.</h3>
+        <p>of manufacturing space</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">👩‍💼</div>
+      <div>
+        <h3>Direct employment to over 4000</h3>
+        <p>people with more than 80% women</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛍️</div>
+      <div>
+        <h3>Selling more than 18 lac</h3>
+        <p>retail packs daily</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚙️</div>
+      <div>
+        <h3>Processing over 3.5 crore</h3>
+        <p>incense sticks everyday</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="content">
+    <h1>STAYING AHEAD IN <span>MANUFACTURING</span></h1>
+
+    <p>
+      By utilizing state-of-the-art technology and a world-class facility,
+      MDPH manufactures high-quality products that are both hygienic and
+      reliable, ensuring customer satisfaction and benefit.
+    </p>
+  </div>
+
+
+
+</section>
+<center>
+  <div class="video" >
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/WRCwLka5aEM?si=Ca2bvpw9-kWKjVV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Youtube video" allowfullscreen>
+    
+   </iframe>
+  </div>
+
+  <button class="btn">Manufacturing Facilities →</button>
+</center>
+<br>
+<br>
+<br>
+<br>
+<!-- footer st -->
+
+
+<footer>
+
+<div class="footer-container">
+
+<div class="left">
+
+<img src="zedblack_logo_menu.webp" class="logo">
+
+<h2>Mysore Deep Perfumery House</h2>
+
+<p>
+Survey No. 9/8, SDA Annex, Lasudia Mori,<br>
+Dewas Naka, Indore, Madhya Pradesh, 452010
+</p>
+
+<p class="email">
+<i class="fa-regular fa-envelope"></i>
+info@zedblack.com
+</p>
+
+<h3 class="follow">Follow MDPH</h3>
+
+<div class="icons">
+<i class="fa-brands fa-facebook-f"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-linkedin-in"></i>
+<i class="fa-brands fa-x-twitter"></i>
+<i class="fa-brands fa-youtube"></i>
+</div>
+
+</div>
+
+<div class="middle">
+
+<div>
+<h2>Who we are</h2>
+<ul>
+<a href="about.html"><li>About Us</li></a>
+<li>Purpose, Ambition & Values</li>
+<li>A Better World</li>
+<li>Manufacturing Facilities</li>
+<li>India Sales</li>
+<li>International Sales</li>
+</ul>
+</div>
+
+<div>
+<h2>Join our team</h2>
+<ul>
+<li>Careers</li>
+<a href="Intern with us.html"><li>Intern with us</li></a>
+<li>Become a Vendor</li>
+<li>Become a Dealer</li>
+</ul>
+</div>
+
+<div>
+<h2>News</h2>
+<ul>
+<li>Exports</li>
+<li>Blog & Updates</li>
+</ul>
+</div>
+
+</div>
+
+<div class="subscribe">
+
+<h2>To stay Informed</h2>
+
+<div class="box">
+
+<p>
+Get updates from MDPH delivered right to your inbox.
+</p>
+
+<input type="email" placeholder="abc@xyz.com">
+
+<button>SUBMIT</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="bottom">
+
+<p>© 2023 Mysore Deep Perfumery House. All rights reserved.</p>
+
+<div class="links">
+<span>Privacy Policy</span>
+<span>Whistleblower Policy</span>
+<span>Terms of Use</span>
+<span>Cookies Policy</span>
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- footer end -->
+
+
+
+
+</body>
+</html>

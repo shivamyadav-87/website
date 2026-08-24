@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Registration</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #141e30, #243b55);
+        min-height: 100vh;
+      }
+
+      header {
+        background: black;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        color: white;
+        margin-bottom: 15px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: red;
+      }
+
+      .container {
+        width: 90%; /* responsive width */
+        max-width: 400px; /* desktop par limit */
+        background: white;
+        margin: 30px auto;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid gray;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      .btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      button {
+        flex: 1;
+        min-width: 100px;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .submit {
+        background: green;
+      }
+      .clear {
+        background: orange;
+      }
+      .cancel {
+        background: red;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      #register {
+        display: none;
+      }
+
+      /* Media Queries */
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 20px;
+        }
+        nav a {
+          font-size: 16px;
+          margin: 0 8px;
+        }
+        input {
+          font-size: 14px;
+          padding: 10px;
+        }
+        .btns {
+          flex-direction: column;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <header>
+        <h1>Welcome To My Website</h1>
+        <nav>
+          <a href="#" onclick="showLogin()">Login</a>
+          <a href="#" onclick="showRegister()">Registration</a>
+        </nav>
+      </header>
+
+      <!-- Login Form -->
+      <form class="container" id="login">
+        <h2>Login</h2>
+        <input
+          type="email"
+          placeholder="Enter Gmail"
+          id="login_email"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          id="login_pass"
+          required
+        />
+        <div class="btns">
+          <button type="submit" class="submit">Submit</button>
+          <button type="reset" class="clear">Clear</button>
+          <button type="button" class="cancel" onclick="showRegister()">
+            Cancel
+          </button>
+        </div>
+      </form>
+
+      <!-- Registration Form -->
+      <form class="container" id="register">
+        <h2>Registration</h2>
+        <input type="text" placeholder="Enter Username" id="uname" required />
+        <input type="email" placeholder="Enter Gmail" id="reg_email" required />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          id="reg_pass"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          id="ucpass"
+          required
+        />
+        <div class="btns">
+          <button type="submit" class="submit">Submit</button>
+          <button type="reset" class="clear">Clear</button>
+          <button type="button" class="cancel" onclick="showLogin()">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </center>
+
+    <script>
+      function showLogin() {
+        document.getElementById("login").style.display = "block";
+        document.getElementById("register").style.display = "none";
+      }
+      function showRegister() {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("register").style.display = "block";
+      }
+
+      // Login
+      document
+        .getElementById("login")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          let uemail = document.getElementById("login_email").value;
+          let upass = document.getElementById("login_pass").value;
+
+          let userlist = JSON.parse(localStorage.getItem("userlist")) || [];
+          let user = userlist.find(
+            (i) => i.uemail === uemail && i.upass === upass,
+          );
+
+          if (user) {
+            localStorage.setItem("currentuser", JSON.stringify(user));
+            alert("Login successfully!!!");
+            window.location.href = "mainpage.html";
+          } else {
+            alert("Login Failed.. Please check email or password!!!");
+          }
+        });
+
+      //register form
+      document
+        .getElementById("register")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          let uname = document.getElementById("uname").value;
+          let uemail = document.getElementById("reg_email").value;
+          let upass = document.getElementById("reg_pass").value;
+          let ucpass = document.getElementById("ucpass").value;
+
+          if (upass === ucpass) {
+            let user = { uname: uname, uemail: uemail, upass: upass };
+            let userlist = JSON.parse(localStorage.getItem("userlist")) || [];
+            userlist.push(user);
+            localStorage.setItem("userlist", JSON.stringify(userlist));
+            alert("Registration successfully done!!!");
+            showLogin();
+          } else {
+            alert("Password and Confirm password does not match. Try again!!!");
+          }
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: url('Copilot_20260719_202415.png') no-repeat center center fixed; background-size: cover; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        header { padding: 20px; text-align: center; width: 100%; }
+        header h1 { color: #000; margin-bottom: 15px; letter-spacing: 1px; }
+        nav a { color: #000; text-decoration: none; margin: 0 15px; font-size: 18px; }
+        nav a:hover { color: blue; }
+        .container { width: 90%; max-width: 400px; background: rgba(255,255,255,.85); margin: 30px auto; padding: 25px; border-radius: 15px; box-shadow: 0 0 25px rgba(0,0,0,.3); color: #333; }
+        h2 { text-align: center; margin-bottom: 20px; color: #0072ff; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; }
+        input:focus { border-color: blue; box-shadow: 0 0 4px skyblue; outline: none; }
+        .btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 15px; }
+        button { flex: 1; min-width: 100px; padding: 10px; border: none; border-radius: 8px; color: white; cursor: pointer; font-weight: bold; }
+        .submit { background: linear-gradient(45deg,#00c6ff,#0072ff); }
+        .clear { background: linear-gradient(45deg,#f7971e,#ffd200); color: #333; }
+        .cancel { background: linear-gradient(45deg,#ff416c,#ff4b2b); }
+        #register { display: none; }
+        @media (max-width:600px) { header h1 { font-size: 20px; } nav a { font-size: 16px; margin: 0 8px; } .container { padding: 15px; } input { font-size: 14px; } .btns { flex-direction: column; } button { width: 100%; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome To My Website</h1>
+        <nav>
+            <a href="#login" id="loginLink">Login</a>
+            <a href="#register" id="registerLink">Registration</a>
+        </nav>
+    </header>
+
+    <form class="container" id="login">
+        <h2>Login</h2>
+        <input type="email" placeholder="Enter Gmail" id="login_email" required>
+        <input type="password" placeholder="Enter Password" id="login_pass" required>
+        <div class="btns">
+            <button type="submit" class="submit">Submit</button>
+            <button type="reset" class="clear">Clear</button>
+            <button type="button" class="cancel" id="showRegister">Cancel</button>
+        </div>
+    </form>
+
+    <form class="container" id="register">
+        <h2>Registration</h2>
+        <input type="text" placeholder="Enter Username" id="uname" required>
+        <input type="email" placeholder="Enter Gmail" id="reg_email" required>
+        <input type="password" placeholder="Enter Password" id="reg_pass" required>
+        <input type="password" placeholder="Confirm Password" id="ucpass" required>
+        <div class="btns">
+            <button type="submit" class="submit">Submit</button>
+            <button type="reset" class="clear">Clear</button>
+            <button type="button" class="cancel" id="showLogin">Cancel</button>
+        </div>
+    </form>
+
+    <script>
+        const loginForm = document.getElementById('login');
+        const registerForm = document.getElementById('register');
+
+        function showLogin() {
+            loginForm.style.display = 'block';
+            registerForm.style.display = 'none';
+        }
+
+        function showRegister() {
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+        }
+
+        function getUserList() {
+            try {
+                return JSON.parse(localStorage.getItem('userlist')) || [];
+            } catch {
+                localStorage.removeItem('userlist');
+                return [];
+            }
+        }
+
+        document.getElementById('loginLink').addEventListener('click', event => { event.preventDefault(); showLogin(); });
+        document.getElementById('registerLink').addEventListener('click', event => { event.preventDefault(); showRegister(); });
+        document.getElementById('showRegister').addEventListener('click', showRegister);
+        document.getElementById('showLogin').addEventListener('click', showLogin);
+
+        loginForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const email = document.getElementById('login_email').value.trim().toLowerCase();
+            const password = document.getElementById('login_pass').value;
+            const user = getUserList().find(item => item.uemail === email && item.upass === password);
+
+            if (!user) {
+                alert('Email ya password galat hai.');
+                return;
+            }
+
+            localStorage.setItem('currentuser', JSON.stringify(user));
+            alert('Login successful!');
+            window.location.href = 'mainpage.html';
+        });
+
+        registerForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const uname = document.getElementById('uname').value.trim();
+            const email = document.getElementById('reg_email').value.trim().toLowerCase();
+            const password = document.getElementById('reg_pass').value;
+            const confirmPassword = document.getElementById('ucpass').value;
+
+            if (password !== confirmPassword) {
+                alert('Password aur Confirm Password match nahi karte.');
+                return;
+            }
+
+            const userlist = getUserList();
+            if (userlist.some(item => item.uemail === email)) {
+                alert('Ye email already registered hai. Login karein.');
+                showLogin();
+                return;
+            }
+
+            userlist.push({ uname: uname, uemail: email, upass: password });
+            localStorage.setItem('userlist', JSON.stringify(userlist));
+            registerForm.reset();
+            alert('Registration successful! Ab login karein.');
+            showLogin();
+        });
+    </script>
+</body>
+</html>

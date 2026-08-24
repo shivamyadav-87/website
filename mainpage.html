@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MDPH Clone Navbar</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+  <!-- header start   -->
+
+
+<header class="navbar">
+  
+  
+<a href="mainpage.html">
+<div class="logo"><img src="image.png" alt="" width="100px" height="30px"></div>
+</a>
+
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+      Who We Are
+      <ul class="dropdown-menu">
+        <li ><a href="about.html">About Us</a></li>
+        <li>Purpose, Ambition & Values</li>
+        <li>A Better World</li>
+        <li>Manufacturing Facilities</li>
+        <li>India Sales</li>
+        <li>International Sales</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Our Brand
+      <ul class="dropdown-menu">
+        <li>About Us</li>
+        <li>Purpose, Ambition & Values</li>
+        <li>A Better World</li>
+        <li>Manufacturing Facilities</li>
+        <li>India Sales</li>
+        <li>International Sales</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Exports
+      <ul class="dropdown-menu">
+        <li>Exports Overview</li>
+        <li>Global Events</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Careers
+      <ul class="dropdown-menu">
+        <li>Current Openings</li>
+        <li>Apply For Job</li>
+        <a href="Intern with us.html"><li>Intern with us</li></a>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<a href="#">Updates</a>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+Contect Us
+      <ul class="dropdown-menu">
+        <li>General Enquiry</li>
+        <li>Our Offices</li>
+        <li>Become a Dwaler</li>
+        <li>Become a Vendor</li>
+        <li>Product Feedback</li>
+        <li>Distributor Feedback</li>
+         <li>Ethics Helpline</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+   
+
+  <div class="shop">
+    <button class="shop-btn">🛒 Shop</button>
+
+    <!-- 🔥 Mega Menu -->
+    <div class="shop-mega">
+
+      <div class="item">
+        <a href="https://www.flipkart.com"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Flipkart_logo_%282026%29.svg"></a>
+        <span><a href="https://www.flipkart.com">Flipkart</a></span>
+      </div>
+
+      <div class="item">
+        <a href="https://in.pinterest.com"><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Pinterest_Logo.svg"></a>
+        <span><a href="https://in.pinterest.com">Pinterest</a></span>
+      </div>
+
+      <div class="item">
+        <a href="https://x.com"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"></a>
+        <span><a href="https://x.com">Twitter</a></span>
+      </div>
+
+      <div class="item">
+        <a href="https://www.amazon.com"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"></a>
+        <span><a href="https://www.amazon.com">Amazon India</a></span>
+      </div>
+
+      <div class="item">
+        <a href="https://www.amazon.in"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"></a>
+        <span><a href="https://www.amazon.in">Amazon International</a></span>
+      </div>
+
+      <div class="item">
+        <a href="https://www.snapdeal.com"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Snapdeal_branding_logo.svg"></a>
+        <span><a href="https://www.snapdeal.com">Snapdeal</a></span>
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- logout start -->
+  
+  <div class="account-menu">
+    <span id="welcomeUser" class="welcome-user" hidden></span>
+    <a id="loginButton" class="login-button" href="login-register.html">Login</a>
+    <button id="logoutButton" class="logout-button" type="button" hidden>Logout</button>
+  </div>
+  <script>
+  const welcomeUser = document.getElementById('welcomeUser');
+  const loginButton = document.getElementById('loginButton');
+  const logoutButton = document.getElementById('logoutButton');
+
+  let currentUser = null;
+  try {
+    currentUser = JSON.parse(localStorage.getItem('currentuser'));
+  } catch {
+    localStorage.removeItem('currentuser');
+  }
+
+  if (currentUser && currentUser.uname) {
+    welcomeUser.textContent = `Hi, ${currentUser.uname}`;
+    welcomeUser.hidden = false;
+    logoutButton.hidden = false;
+    loginButton.hidden = true;
+  }
+
+  logoutButton.addEventListener('click', function () {
+    localStorage.removeItem('currentuser');
+    window.location.href = 'login-register.html';
+  });
+</script>
+<!-- logout end -->
+
+
+</header>
+<!-- header end -->
+
+
+
+
+
+<!-- main -->
+ <center>
+<a href="https://www.zedblack.com/collections/camphor"><img src="Camphor_1.webp" alt="Camphor collection" class="hero-banner"></a>
+
+</center>
+<center>
+  <BR>
+
+  <BR>
+<h2>ICONIC BRANDS YOU TRUST</h2>
+<h1>TO MAKE YOUR HOME BETTER,</h1>
+
+
+<p>For more than 31 years MDPH has been innovating and launching best in class brands meeting</p>
+<p> multiple consumer needs, spanning across various sectors.</p>
+</center>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="gallary" >
+
+<a href="https://mdph.com/zed-black-15/"><img src="Logo-1.png" alt="" width="100" class="hi img-border"></a>
+<a href="https://www.canva.com/dream-lab"><img src="Logo-2.png" alt="" width="100" class="hi img-border"></a>
+<a href="https://mdph.com/manthan/"><img src="Logo-3.png" alt="" width="100" class="hi img-border"></a>
+<a href="https://mdph.com/dindin/"><img src="Logo-4.png" alt="" width="100" class="hi img-border"></a>
+<a href="https://mdph.com/bronut/"><img src="Logo-5.png" alt="" width="100" class="hi img-border"></a>
+<a href="https://mdph.com/orva/"><img src="Logo-7.png" alt="" width="100" class="hi img-border"></a>
+
+
+
+</div>
+
+
+
+<!-- ff img box st -->
+ <div class="container">
+    <img src="ff.png" alt="Background Image">
+    <div class="overlay-box">
+      <h2>Creating Future <b> Together</b></h2>
+      <br>
+      <p>We strive to create a <b>better tomorrow</b> <br>
+One that is marked by <b> positive change and progress.</b></p>
+<br>
+<p>We at MDPH have built robust operations. We manufacture over 18 lac retail packs every day in our 4 manufacturing units, having a floor space of 10 lac sq ft, employing over 4000 labours with over 80% women. In India, we distribute over 1200+ SKUs through our network of 37 depots, 3500 distributors, and 7.5 lac plus retail outlets. We also export our products to over 40 countries with an overseas office in New York.</p>
+<a href="https://mdph.com/about-us/" target="_blank">
+      <button><b>Read More</b></button>
+</a>
+    </div>
+  </div>
+
+  <!-- ff img box end -->
+
+  <center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<strong style="font-size: 25px;">
+<p>Moving forward with</p>
+<h1>THE NEWNESS</h1>
+</strong>
+
+<p>MDPH aims to provide a connected world experience that prioritizes innovation and customer-centricity, with a focus <br> on creating a sense of newness by offering unique and novel experiences to its customers</p>
+
+<br>
+<br>
+<br>
+
+
+</center>
+
+<section class="mission">
+ 
+
+  <div class="mission-grid">
+    <div class="mission-block">
+      <br>
+      <br>
+       <h2>Our Mission</h2>
+  <p>
+    MDPH remains committed to delivering high-quality, <br>reliable products and services to its customers, as we <br>strive to provide the best value possible.
+  </p>
+  
+      <h3 style="font-weight: 300;">INNOVATION</h3>
+      <h4 style="color: gray; font-weight: 300;">
+       At MDPH, innovation is what we do best.  Every aspect of our business is constantly reinvented by our start-up heart and global resources, Our efforts are fueled by a deep understanding of people - their needs, values, desires, and passions - which serves as a wellspring of inspiration for our innovative work.
+      </h4>
+      <p>By leveraging the reach and influence of our brands, we are committed to <b>making a lasting, positive impact on the world and our business.</b></p>
+    </div>
+
+    <div class="mission-block">
+     
+      
+      
+      <img src="sustainable-1024x278.webp" alt="Sustainable growth" class="mission-image">
+      <h3 style="font-weight: 300;" >SUSTAINABLE GROWTH</h3>
+      <p style="color: gray;">We are committed to doing more good for our planet and society, not simply reducing harm. We believe in taking action on the social and environmental issues facing the world today, and we strive to enhance people's lives through the use of innovative, sustainable, and high-quality products. Our dedication to sustainability is a core part of our mission and we are constantly exploring new ways to minimize our impact on the environment while also making a positive impact on society. We believe that by taking a holistic approach to business, we can create a better future for everyone.
+        
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- video section -->
+<section class="sect">
+  <br>
+<br>
+<br>
+
+  <div class="video-section">
+    <div class="video-container">
+      <!-- First Video -->
+      <div class="video-box">
+        <h2>Sab Shubh Hoga</h2>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/W0CZsTiE3qk?si=H43QpOthBJyrmCcl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Second Video -->
+      <div class="video-box">
+        <h2>Manthan Zaroori Hai</h2>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/xTDqy8oyGA4?si=xGrp3blIPsXssdyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+<br>
+
+</section>
+<br>
+
+<!-- video section end -->
+
+ <section class="updates-section">
+  <br>
+    <h2>Latest Updates</h2>
+    <div class="updates-grid">
+      <!-- Card 1 -->
+      <div class="update-card" >
+        <img src="EarthDay941x525-960x525.png" alt="Earth Day Event">
+        <div class="update-content">
+          <div class="update-date">April 22, 2026</div>
+          <div class="update-title">ET Edge Insights Earth Day Edition: MDPH’s Purpose-Driven Approach to Sustainability</div>
+         
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="update-card">
+        <img src="Holi-Blog.jpg-1.jpeg" alt="Industrial Visit">
+        <div class="update-content">
+          <div class="update-date">April 16, 2026</div>
+          <div class="update-title">Industrial Visit at MDPH Kshipra: Bridging Classroom Learning with Real-World Experience</div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="update-card">
+        <img src="Jeevan-Kumar-Jain941x525-02-01-1.png" alt="Farewell Event">
+        <div class="update-content">
+          <div class="update-date">April 14, 2026</div>
+          <div class="update-title">A Memorable Evening of Gratitude & Legacy: Farewell to Mr. Jeevan Kumar Jain</div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="update-card">
+        <img src="SabShubhHoga-Blog941x525.png" alt="MS Dhoni Campaign">
+        <div class="update-content">
+          <div class="update-date">March 26, 2026</div>
+          <div class="update-title">Zed Black Launches Its Third Campaign with MS Dhoni for #SabShubhHoga</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+    <br>
+  
+  
+
+
+
+<!-- footer st -->
+
+
+<footer>
+
+<div class="footer-container">
+
+<div class="left">
+
+<img src="zedblack_logo_menu.webp" class="logo">
+
+<h2>Mysore Deep Perfumery House</h2>
+
+<p>
+Survey No. 9/8, SDA Annex, Lasudia Mori,<br>
+Dewas Naka, Indore, Madhya Pradesh, 452010
+</p>
+
+<p class="email">
+<i class="fa-regular fa-envelope"></i>
+info@zedblack.com
+</p>
+
+<h3 class="follow">Follow MDPH</h3>
+
+<div class="icons">
+<i class="fa-brands fa-facebook-f"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-linkedin-in"></i>
+<i class="fa-brands fa-x-twitter"></i>
+<i class="fa-brands fa-youtube"></i>
+</div>
+
+</div>
+
+<div class="middle">
+
+<div>
+<h2>Who we are</h2>
+<ul>
+<a href="about.html"><li>About Us</li></a>
+<li>Purpose, Ambition & Values</li>
+<li>A Better World</li>
+<li>Manufacturing Facilities</li>
+<li>India Sales</li>
+<li>International Sales</li>
+</ul>
+</div>
+
+<div>
+<h2>Join our team</h2>
+<ul>
+<li>Careers</li>
+<a href="Intern with us.html"><li>Intern with us</li></a>
+<li>Become a Vendor</li>
+<li>Become a Dealer</li>
+</ul>
+</div>
+
+<div>
+<h2>News</h2>
+<ul>
+<li>Exports</li>
+<li>Blog & Updates</li>
+</ul>
+</div>
+
+</div>
+
+<div class="subscribe">
+
+<h2>To stay Informed</h2>
+
+<div class="box">
+
+<p>
+Get updates from MDPH delivered right to your inbox.
+</p>
+
+<input type="email" placeholder="abc@xyz.com">
+
+<button>SUBMIT</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="bottom">
+
+<p>© 2023 Mysore Deep Perfumery House. All rights reserved.</p>
+
+<div class="links">
+<span>Privacy Policy</span>
+<span>Whistleblower Policy</span>
+<span>Terms of Use</span>
+<span>Cookies Policy</span>
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- footer end -->
+
+
+
+
+
+</body>
+</html>

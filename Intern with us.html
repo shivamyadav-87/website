@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internship Section</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#ffffff;
+    }
+
+    /* HERO SECTION */
+
+    .bg789{
+      height:350px;
+      background:url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200") center/cover no-repeat;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+    }
+
+    .bg789::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.45);
+    }
+
+    .bg789-content{
+      position:relative;
+      z-index:1;
+    }
+
+    .bg789 h1{
+      font-size:48px;
+      font-weight:bold;
+      width:70%;
+      margin:auto;
+    }
+
+    .bg789 p{
+      margin-bottom:10px;
+      font-size:18px;
+    }
+
+    /* CARD SECTION */
+
+    .cards{
+      width:85%;
+      margin:-60px auto 40px;
+      background:white;
+      padding:40px;
+      border-radius:10px;
+      position:relative;
+      z-index:2;
+    }
+
+    .card-container{
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .card{
+      width:180px;
+      text-align:center;
+    }
+
+    .card img{
+      width:100%;
+      height:170px;
+      object-fit:cover;
+      border-radius:20px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .card h3{
+      margin-top:15px;
+      font-size:28px;
+      color:#333;
+    }
+
+    /* TEXT SECTION */
+
+    .content{
+      text-align:center;
+      margin-top:50px;
+      color:#222;
+    }
+
+    .content h2{
+      font-size:38px;
+      margin-bottom:25px;
+      line-height:1.4;
+    }
+
+    .content p{
+      width:75%;
+      margin:20px auto;
+      font-size:18px;
+      color:#666;
+      line-height:1.8;
+    }
+
+    .content h3{
+      font-size:32px;
+      margin-top:40px;
+      line-height:1.5;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      .bg789 h1{
+        width:90%;
+        font-size:35px;
+      }
+
+      .card-container{
+        justify-content:center;
+      }
+
+      .card{
+        width:150px;
+      }
+
+      .content h2{
+        font-size:28px;
+      }
+
+      .content h3{
+        font-size:24px;
+      }
+
+      .content p{
+        width:95%;
+      }
+  
+    }
+
+    .form-section{
+   width:85%;
+   margin:auto;
+   padding:50px;
+   background:white;
+}
+
+.intern-form{
+   display:grid;
+   grid-template-columns:1fr 1fr;
+   gap:25px;
+}
+
+.input-box{
+   display:flex;
+   flex-direction:column;
+}
+
+.input-box label{
+   margin-bottom:8px;
+   font-size:15px;
+   color:#222;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+   width:100%;
+   padding:14px;
+   border:1px solid #ccc;
+   outline:none;
+   font-size:15px;
+}
+
+.input-box textarea{
+   height:90px;
+   resize:none;
+}
+
+.full{
+   grid-column:1/3;
+}
+
+.small{
+   margin-top:8px;
+   font-size:13px;
+   color:gray;
+}
+
+.check{
+   display:flex;
+   align-items:center;
+   gap:10px;
+   font-size:14px;
+}
+
+.submit-btn{
+   grid-column:1/3;
+   padding:16px;
+   background:#444;
+   color:white;
+   border:none;
+   font-size:18px;
+   cursor:pointer;
+}
+
+.submit-btn:hover{
+   background:black;
+}
+
+@media(max-width:768px){
+
+   .intern-form{
+      grid-template-columns:1fr;
+   }
+
+   .full,
+   .submit-btn{
+      grid-column:1/2;
+   }
+}
+
+
+.form-section{
+    width: 80%;
+}
+  </style>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="intern-page">
+
+
+
+<!-- header start -->
+
+
+<header class="navbar">
+  
+  
+<a href="mainpage.html">
+<div class="logo"><img src="image.png" alt="" width="100px" height="30px"></div>
+</a>
+
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+      Who We Are
+      <ul class="dropdown-menu">
+        <li ><a href="about.html">About Us</a></li>
+        <li>Purpose, Ambition & Values</li>
+        <li>A Better World</li>
+        <li>Manufacturing Facilities</li>
+        <li>India Sales</li>
+        <li>International Sales</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Our Brand
+      <ul class="dropdown-menu">
+        <li>About Us</li>
+        <li>Purpose, Ambition & Values</li>
+        <li>A Better World</li>
+        <li>Manufacturing Facilities</li>
+        <li>India Sales</li>
+        <li>International Sales</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Exports
+      <ul class="dropdown-menu">
+        <li>Exports Overview</li>
+        <li>Global Events</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+    Careers
+      <ul class="dropdown-menu">
+        <li>Current Openings</li>
+        <li>Apply For Job</li>
+        <li>Intern with us</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<a href="#">Updates</a>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+Contect Us
+      <ul class="dropdown-menu">
+        <li>General Enquiry</li>
+        <li>Our Offices</li>
+        <li>Become a Dwaler</li>
+        <li>Become a Vendor</li>
+        <li>Product Feedback</li>
+        <li>Distributor Feedback</li>
+         <li>Ethics Helpline</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+   
+
+  <div class="shop">
+    <button class="shop-btn">🛒 Shop</button>
+
+    <!-- 🔥 Mega Menu -->
+    <div class="shop-mega">
+
+      <div class="item">
+        <a href="https://www.flipkart.com"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Flipkart_logo_%282026%29.svg"></a>
+        <span><a href="https://www.flipkart.com">Flipkart</a></span>
+      </div>
+
+      <div class="item">
+        <a href="https://in.pinterest.com"><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Pinterest_Logo.svg"></a>
+        <span><a href="https://in.pinterest.com">Pinterest</a></span>
+      </div>
+
+      <div class="item">
+        <a href="https://x.com"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"></a>
+        <span><a href="https://x.com">Twitter</a></span>
+      </div>
+
+      <div class="item">
+        <a href="https://www.amazon.com"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"></a>
+        <span><a href="https://www.amazon.com">Amazon India</a></span>
+      </div>
+
+      <div class="item">
+        <a href="https://www.amazon.in"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"></a>
+        <span><a href="https://www.amazon.in">Amazon International</a></span>
+      </div>
+
+      <div class="item">
+        <a href="https://www.snapdeal.com"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Snapdeal_branding_logo.svg"></a>
+        <span><a href="https://www.snapdeal.com">Snapdeal</a></span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+</header>
+
+
+
+
+<!--img Section end--> 
+   
+  <!-- HERO -->
+
+  <section class="bg789">
+    <div class="bg789-content">
+      <p>Give wings to your ambitions</p>
+      <h1>The right place for discover your potential and create impact</h1>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+
+  <section class="cards">
+
+    <div class="card-container">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=500" alt="">
+        <h3>Purpose</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=500" alt="">
+        <h3>Appreciation</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=500" alt="">
+        <h3>Success</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=500" alt="">
+        <h3>Opportunity</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=500" alt="">
+        <h3>Well Being</h3>
+      </div>
+
+    </div>
+<!--img Section end--> 
+    <!-- TEXT -->
+
+    <div class="content">
+
+      <h1>
+        Everyone gets a start somewhere, and an internship
+        can be one way to launch a successful career.
+      </h1>
+
+      <p>
+     MDPH provides exciting Internship opportunities at various positions in Indore. Please fill the form below if you are looking for an internship filled with learning and growth. To create a significant impact, we need great people to join our team. Everything we design, every day, in many ways, helps our community to pursue their career in the FMCG Sector.
+      </p>
+
+     
+      <h3>
+        We offer students a variety of opportunities to get to know MDPH.
+        <br>
+        We look for students who will become tomorrow's business leaders.
+      </h3>
+<hr>
+    </div>
+
+  </section>
+<!--text end--> 
+
+
+<!--Form Section end--> 
+  <section class="form-section">
+
+  <form class="intern-form">
+
+    <div class="input-box">
+      <label>Full Name</label>
+      <input type="text" placeholder="Full Name">
+    </div>
+
+    <div class="input-box">
+      <label>Email</label>
+      <input type="email" placeholder="name@xyz.com">
+    </div>
+
+    <div class="input-box">
+      <label>Mobile No.</label>
+      <input type="text" placeholder="+91 9876543210">
+    </div>
+
+    <div class="input-box">
+      <label>Date of Birth</label>
+      <input type="date">
+    </div>
+
+    <div class="input-box">
+      <label>Gender</label>
+      <select>
+        <option>Please choose an option</option>
+      </select>
+    </div>
+
+    <div class="input-box">
+      <label>Apply for</label>
+      <select>
+        <option>Please choose an option</option>
+      </select>
+    </div>
+
+    <div class="input-box">
+      <label>Name of College</label>
+      <input type="text" placeholder="IIT/MIT">
+    </div>
+
+    <div class="input-box">
+      <label>Course Name</label>
+      <input type="text" placeholder="B.Com/BBA/MBA">
+    </div>
+
+    <div class="input-box">
+      <label>Admission Year</label>
+      <input type="text" placeholder="Admission Year">
+    </div>
+
+    <div class="input-box">
+      <label>Tentative Internship Start Date</label>
+      <input type="date">
+    </div>
+
+    <div class="input-box">
+      <label>Internship Length (In Months)</label>
+      <input type="text">
+    </div>
+
+    <div class="input-box full">
+      <label>Address</label>
+      <textarea placeholder="Address"></textarea>
+    </div>
+
+    <div class="input-box">
+      <label>City</label>
+      <input type="text" placeholder="City">
+    </div>
+
+    <div class="input-box">
+      <label>PIN</label>
+      <input type="text" placeholder="Zip Code">
+    </div>
+
+    <div class="input-box">
+      <label>State</label>
+      <input type="text" placeholder="State">
+    </div>
+
+    <div class="input-box">
+      <label>Country</label>
+      <input type="text" placeholder="Country">
+    </div>
+
+    <div class="input-box">
+      <label>Current Location</label>
+      <input type="text" placeholder="Current Location">
+    </div>
+
+    <div class="input-box full">
+      <label>Core Expertise</label>
+      <textarea placeholder="Area's in which you have expertise and experience"></textarea>
+    </div>
+
+    <div class="input-box full">
+      <label>Any Other Messages</label>
+      <textarea placeholder="Any Other Message"></textarea>
+    </div>
+
+    <div class="input-box full">
+      <input type="file">
+      <p class="small">Max file size 10 MB.</p>
+    </div>
+
+    <div class="check full">
+      <input type="checkbox">
+      <span>
+        I Agree, By using this form you agree with the storage and handling of your data by this website.
+      </span>
+    </div>
+
+    <button type="submit" class="submit-btn">
+      SUBMIT
+    </button>
+
+  </form>
+
+</section>
+<!--Form Section end--> 
+</body>
+</html>
