@@ -1074,7 +1074,7 @@ footer{
 /* Home page responsive layout */
 .hero-banner {
   display: block;
-  width: min(100%, 1400px);
+  width: min(100%, 1450px);
   height: auto;
   max-height: 613px;
   margin: 100px auto 0;
